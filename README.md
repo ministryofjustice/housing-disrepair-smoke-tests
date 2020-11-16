@@ -1,4 +1,4 @@
-# Housing Disrepair Smoke Test
+# Housing Disrepair Smoke Test
 
 This repository runs smoke tests for the [Housing Disrepair Project](https://github.com/ministryofjustice/fb-housing-disrepair-prototype)
 
