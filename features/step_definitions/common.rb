@@ -3,13 +3,12 @@ When(/^I visit "([^"]*)"$/) do |path|
 end
 
 Then(/^I should see "([^"]*)"$/) do |text|
-  sleep 1
   expect(page).to have_text(text)
 end
 
 When(/^I click the "([^"]*)" button$/) do |text|
   click_button(text)
-  sleep 1
+  sleep 1 if text == "Continue"
 end
 
 When(/^I click the radio button "([^"]*)"$/) do |text|
