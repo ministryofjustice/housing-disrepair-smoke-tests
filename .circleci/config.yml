@@ -1,0 +1,43 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+
+references:
+  app_containers: &app_containers
+    docker:
+      - image: circleci/ruby:2.7.2-node-browsers
+        environment:
+          RACK_ENV: test
+  cloud_container: &cloud_container
+    docker:
+      - image: ministryofjustice/cloud-platform-tools:1.24
+        environment:
+          GITHUB_TEAM_NAME_SLUG: family-justice
+          REPO_NAME: housing-disrepair-smoke-tests
+
+jobs:
+  test:
+    <<: *app_containers
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+            yarn install --frozen-lockfile
+
+
+      - run:
+          name: run smoke tests
+          command: HOST_URL=$URL bundle exec cucumber
+
+
+workflows:
+  version: 2
+
+  test:
+    jobs:
+      - test
