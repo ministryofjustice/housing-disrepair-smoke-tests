@@ -37,17 +37,16 @@ jobs:
 
 workflows:
   version: 2
+  commit:
     jobs:
       - test
-    smoke-tests:
-     jobs:
-       - test:
-           name: smoke tests
-           command: HOST_URL=$URL bundle exec cucumber
-     triggers:
-       - schedule:
-           cron: "0 0 * * *"
-           filters:
-             branches:
-               only:
-                 - master
+  nightly:
+    triggers: #use the triggers key to indicate a scheduled build
+      - schedule:
+          cron: "0 0 * * *" # use cron syntax to set the schedule
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - coverage
