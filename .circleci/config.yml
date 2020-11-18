@@ -37,7 +37,17 @@ jobs:
 
 workflows:
   version: 2
-
-  test:
     jobs:
       - test
+    smoke-tests:
+     jobs:
+       - test:
+           name: smoke tests
+           command: HOST_URL=$URL bundle exec cucumber
+     triggers:
+       - schedule:
+           cron: "0 0 * * *"
+           filters:
+             branches:
+               only:
+                 - master
