@@ -35,35 +35,38 @@ jobs:
       - run:
           name: run smoke tests
           command: HOST_URL=$URL bundle exec cucumber
+      
       - slack/notify:
-        event: pass
-        custom: |
-          {
-          	"blocks": [
-          		{
-          			"type": "section",
-          			"text": {
-          				"type": "mrkdwn",
-          				"text": "Our checker is in good health in staging."
-          			}
-          		}
-          	]
-          }
+          channel: $SLACK_DEFAULT_CHANNEL
+          event: pass
+          custom: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "Our checker is in good health in staging."
+                  }
+                }
+              ]
+            }
 
       - slack/notify:
-        event: fail
-        custom: |
-          {
-          	"blocks": [
-          		{
-          			"type": "section",
-          			"text": {
-          				"type": "mrkdwn",
-          				"text": "Hello, it seems that something may have changed on the OSS project. Please let us know if the changes are intentional, so that a developer can adapt the tests to reflect the new changes."
-          			}
-          		}
-          	]
-          }
+          channel: $SLACK_DEFAULT_CHANNEL
+          event: fail
+          custom: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "Hello, it seems that something may have changed on the OSS project. Please let us know if the changes are intentional, so that a developer can adapt the tests to reflect the new changes."
+                  }
+                }
+              ]
+            }
 
 
 
