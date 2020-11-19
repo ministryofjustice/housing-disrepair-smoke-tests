@@ -49,4 +49,4 @@ workflows:
               only:
                 - master
     jobs:
-      - coverage
+      - test
