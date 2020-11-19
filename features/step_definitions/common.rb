@@ -1,3 +1,8 @@
+When(/^I debug$/) do
+  require 'pry'
+  binding.pry
+end
+
 When(/^I visit "([^"]*)"$/) do |path|
   visit path
 end
@@ -23,7 +28,6 @@ When(/^I check "([^"]*)" and click continue$/) do |text|
   find('label', text: text).click
   step %[I click the "Continue" button]
 end
-
 
 When(/^I choose "([^"]*)"$/) do |text|
   step %[I click the radio button "#{text}"]
