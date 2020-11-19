@@ -37,7 +37,16 @@ jobs:
 
 workflows:
   version: 2
-
-  test:
+  commit:
     jobs:
       - test
+  nightly:
+    triggers: #use the triggers key to indicate a scheduled build
+      - schedule:
+          cron: "0 6-18 * * *" # use cron syntax to set the schedule
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - coverage
