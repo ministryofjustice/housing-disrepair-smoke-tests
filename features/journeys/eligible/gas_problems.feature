@@ -14,7 +14,7 @@ Feature: Gas Problems
      And I choose "More than 6 months"
     Then I should see "Have you told your landlord or letting agent?"
      And I check "Yes, I have told them in person or on the phone"
-     And I check "Yes, I have written an email or letter" and click continue
+     And I check "Yes, I have written a text message, email or letter" and click continue
     Then I should see "Is your landlord being abusive or threatening eviction?"
      And I choose "No"
     Then I should see "Is your landlord or letting agent entering your home without notice?"
@@ -33,7 +33,6 @@ Feature: Gas Problems
      And I click the "Confirm" button
     Then I should see "Next steps: what to do now"
       And I should see "You said the problem had affected your health"
-      And I should see "Write to your landlord or letting agent again"
       And I should see "Know your rights and your landlord's responsibilities"
       And I should see "You could consider working with a mediator"
       And I should see "Future steps and useful resources"

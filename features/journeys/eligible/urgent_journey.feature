@@ -26,7 +26,7 @@ Feature: Urgent Journey
     Then I should see "How long has the problem been going on?"
       And I choose "More than 6 months"
     Then I should see "Have you told your landlord or letting agent?"
-      And I check "Yes, I have written an email or letter" and click continue
+      And I check "Yes, I have written a text message, email or letter" and click continue
     Then I should see "Is your landlord being abusive or threatening eviction?"
       And I choose "No"
     Then I should see "Is your landlord or letting agent entering your home without notice?"
@@ -37,9 +37,8 @@ Feature: Urgent Journey
       And I click the "Confirm" button
     Then I should see "Next steps: what to do now"
       And I should see "You said the problem had affected your health"
-      And I should see "You said the problem may be serious enough for an emergency court order"
+      And I should see "You said the problem was urgent"
       And I should see "Your landlord may not enter your home without notice"
-      And I should see "Write to your landlord or letting agent again"
       And I should see "Know your rights and your landlord's responsibilities"
       And I should see "Future steps and useful resources"
       And I should see "Help us improve, complete the survey"
