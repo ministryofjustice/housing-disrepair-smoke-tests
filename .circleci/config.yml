@@ -35,7 +35,9 @@ jobs:
       - run:
           name: run smoke tests
           command: HOST_URL=$URL bundle exec cucumber
-      
+
+  notify:
+    steps:
       - slack/notify:
           channel: $SLACK_DEFAULT_CHANNEL
           event: pass
@@ -71,10 +73,11 @@ jobs:
 
 
 workflows:
-  commit:
+  test-and-notify:
     jobs:
       - test
-  nightly:
+      - notify
+  hourly:
     triggers: #use the triggers key to indicate a scheduled build
       - schedule:
           cron: "0 6-18 * * *" # use cron syntax to set the schedule
@@ -84,3 +87,4 @@ workflows:
                 - master
     jobs:
       - test
+      - notify
