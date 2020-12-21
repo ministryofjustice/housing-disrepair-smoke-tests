@@ -37,9 +37,3 @@ Feature: Gas Problems
       And I should see "You could consider working with a mediator"
       And I should see "Future steps and useful resources"
       And I should see "Help us improve, complete the survey"
-     And I click the "Continue" button
-    Then I should see "Your rights and your landlord's responsibilities"
-     And I click the "Continue" button
-    Then I should see "Future steps and useful resources"
-      And I should see "Speak to someone about the problem"
-      And I should see "Making complaints about landlords, letting agents and the local council"
