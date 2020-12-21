@@ -11,6 +11,11 @@ Then(/^I should see "([^"]*)"$/) do |text|
   expect(page).to have_text(text)
 end
 
+When(/^I click the "([^"]*)" link$/) do |text|
+  click_link(text)
+  sleep 1
+end
+
 When(/^I click the "([^"]*)" button$/) do |text|
   click_button(text)
   sleep 1 if (text == "Continue" || text == "Confirm")
