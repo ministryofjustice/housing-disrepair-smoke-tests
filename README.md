@@ -16,3 +16,8 @@ This repository runs smoke tests for the [Housing Disrepair Project](https://git
 ```
 HOST_URL=example.url bundle exec cucumber
 ```
+
+
+## Slack Integration
+
+This service can have Slack notifications.
