@@ -25,15 +25,10 @@ Feature: Gas Problems
      And I choose "Yes"
     Then I should see "Would you consider taking your landlord or letting agent to court?"
      And I choose "No"
-    Then I should see "Have you tried working with a professional mediator?"
-     And I choose "No"
-    Then I should see "Have you gathered evidence from experts?"
-     And I choose "Yes"
     Then I should see "Check your answers"
-     And I click the "Confirm" button
+     And I click the "Next steps" button
     Then I should see "Next steps: what to do now"
       And I should see "You said the problem had affected your health"
       And I should see "Know your rights and your landlord's responsibilities"
-      And I should see "You could consider working with a mediator"
       And I should see "Future steps and useful resources"
       And I should see "Help us improve, complete the survey"

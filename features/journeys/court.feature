@@ -25,12 +25,8 @@ Feature: Consider taking landlord to court
      And I choose "Yes"
     Then I should see "Would you consider taking your landlord or letting agent to court?"
      And I choose "Yes"
-    Then I should see "Have you tried working with a professional mediator?"
-     And I choose "Yes"
-    Then I should see "Have you gathered evidence from experts?"
-     And I choose "Yes"
     Then I should see "Check your answers"
-     And I click the "Confirm" button
+     And I click the "Next steps" button
     Then I should see "You said the problem had affected your health"
     Then I should see "You said you may consider taking legal action"
     Then I should see "There is a process you need to follow to make a claim. Find out more about taking legal action"

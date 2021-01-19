@@ -34,7 +34,7 @@ Feature: Urgent Journey
     Then I should see "It sounds like the problem may be urgent"
       And I choose "Yes, the problem is urgent"
     Then I should see "Check your answers"
-      And I click the "Confirm" button
+      And I click the "Next steps" button
     Then I should see "Next steps: what to do now"
       And I should see "You said the problem had affected your health"
       And I should see "You said the problem was urgent"
