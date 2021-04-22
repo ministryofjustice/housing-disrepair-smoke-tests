@@ -23,15 +23,13 @@ Feature: Urgent Journey
       And I check "There is a leak inside" and click continue
     Then I should see "Has your health been affected by this problem?"
       And I check "Yes, it's caused a physical health problem, or made an existing problem worse" and click continue
-    Then I should see "How long has the problem been going on?"
-      And I choose "More than 6 months"
     Then I should see "Have you told your landlord or letting agent?"
       And I check "Yes, I have written a text message, email or letter" and click continue
-    Then I should see "Is your landlord being abusive or threatening eviction?"
+    Then I should see "Are you concerned you will be evicted for asking for repairs?"
       And I choose "No"
     Then I should see "Is your landlord or letting agent entering your home without notice?"
       And I choose "Yes"
-    Then I should see "It sounds like the problem may be urgent"
+    Then I should see "Is the problem urgent?"
       And I choose "Yes, the problem is urgent"
     Then I should see "Check your answers"
       And I click the "Next steps" button
