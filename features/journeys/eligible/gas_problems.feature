@@ -10,14 +10,14 @@ Feature: Gas Problems
      And I check "Hot water supply" and click continue
     Then I should see "Has your health been affected by this problem?"
      And I check "Yes, it's caused a physical health problem, or made an existing problem worse" and click continue
-    Then I should see "How long has the problem been going on?"
-     And I choose "More than 6 months"
     Then I should see "Have you told your landlord or letting agent?"
      And I check "Yes, I have told them in person or on the phone"
      And I check "Yes, I have written a text message, email or letter" and click continue
-    Then I should see "Is your landlord being abusive or threatening eviction?"
+    Then I should see "Are you concerned you will be evicted for asking for repairs?"
      And I choose "No"
     Then I should see "Is your landlord or letting agent entering your home without notice?"
+     And I choose "No"
+    Then I should see "Is the problem urgent?"
      And I choose "No"
     Then I should see "Have you contacted the local council?"
      And I choose "Yes"
