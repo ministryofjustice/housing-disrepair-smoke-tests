@@ -9,7 +9,7 @@ Feature: Gas Problems
     Then I should see "Gas, electricity, boiler, heating or hot water supply is not working"
      And I check "Hot water supply" and click continue
     Then I should see "Has your health been affected by this problem?"
-     And I check "Yes, it's caused a physical health problem, or made an existing problem worse" and click continue
+     And I check "Yes, there's a risk of developing or aggravating a physical health problem" and click continue
     Then I should see "Have you told your landlord or letting agent?"
      And I check "Yes, I have told them in person or on the phone"
      And I check "Yes, I have written a text message, email or letter" and click continue
