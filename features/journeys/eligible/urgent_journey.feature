@@ -22,7 +22,7 @@ Feature: Urgent Journey
       And I check "Water is coming in to the property from outside"
       And I check "There is a leak inside" and click continue
     Then I should see "Has your health been affected by this problem?"
-      And I check "Yes, it's caused a physical health problem, or made an existing problem worse" and click continue
+      And I check "Yes, there's a risk of developing or aggravating a physical health problem" and click continue
     Then I should see "Have you told your landlord or letting agent?"
       And I check "Yes, I have written a text message, email or letter" and click continue
     Then I should see "Are you concerned you will be evicted for asking for repairs?"
