@@ -29,7 +29,7 @@ Feature: Consider taking landlord to court
      And I click the "Next steps" button
     Then I should see "You said the problem had affected your health"
     Then I should see "You said you may consider taking legal action"
-    Then I should see "There is a process you need to follow to make a claim. Find out more about taking legal action"
+    Then I should see "You may want to talk to a solicitor or qualified legal professional before you start any legal action"
      And I click the "your rights and your landlord's responsibilities" link
     Then I should see "Your rights and your landlord's responsibilities"
     Then I should see "Go back to the 'What to do now' page."
